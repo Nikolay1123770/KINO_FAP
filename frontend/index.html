@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KinoFap — Каталог</title>
+<link rel="stylesheet" href="./styles.css"/>
+</head><body>
+<header class="navbar">
+  <a class="logo" href="./index.html">Kino<span>Fap</span></a>
+  <div class="actions">
+    <button class="icon-btn" id="openSearch" title="Поиск (Ctrl+K)">🔎</button>
+    <a class="icon-btn" href="./favorites.html" title="Избранное">⭐</a>
+  </div>
+</header>
+<main class="container">
+  <div class="grid" id="grid"></div>
+  <div id="sentinel" class="container" style="text-align:center;color:#aaa;padding:18px">Загрузка…</div>
+</main>
+
+<!-- Search modal -->
+<div class="modal" id="searchModal">
+  <div class="card-lg" style="position:relative">
+    <button class="close-x" id="closeSearch">×</button>
+    <h3>Поиск</h3>
+    <div class="search-wrap">
+      <input class="search-input" id="searchInput" placeholder="Введите название или ID (например 301)" />
+    </div>
+    <div id="searchResults" class="search-results"></div>
+    <p class="sub" style="color:#aaa">Подсказка: введите числовой Kinopoisk ID, появится «Открыть по ID».</p>
+  </div>
+</div>
+
+<!-- Detail modal -->
+<div class="modal" id="detailModal">
+  <div class="card-lg" style="position:relative">
+    <button class="close-x" id="closeDetail">×</button>
+    <div id="detailBody"></div>
+  </div>
+</div>
+
+<script src="./config.js"></script>
+<script src="./search.js"></script>
+<script src="./app.js"></script>
+</body></html>

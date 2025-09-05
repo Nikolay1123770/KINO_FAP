@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Избранное — KinoFap</title>
+<link rel="stylesheet" href="./styles.css"/>
+</head><body>
+<header class="navbar">
+  <a class="logo" href="./index.html">Kino<span>Fap</span></a>
+  <div class="actions"><a class="icon-btn" href="./index.html">Каталог</a></div>
+</header>
+<main class="container">
+  <h2>Избранное</h2>
+  <div class="grid" id="favGrid"></div>
+</main>
+<script>
+function getFavorites(){ return JSON.parse(localStorage.getItem('favorites')||'[]'); }
+function render(){
+  const grid=document.getElementById('favGrid');
+  const fav=getFavorites();
+  if(!fav.length){ grid.innerHTML='<p class="sub" style="color:#aaa">Пока пусто</p>'; return; }
+  grid.innerHTML=fav.map(f=>\`<div class='card' onclick="location.href='watch.html?id=\${f.id}'">
+    <img src="\${f.poster||''}" alt="\${f.title}"/>
+    <div class='meta'><div class='title'>\${f.title}</div></div>
+  </div>\`).join('');
+}
+render();
+</script>
+</body></html>

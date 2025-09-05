@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KinoFap — Смотреть</title>
+<link rel="stylesheet" href="./styles.css"/>
+</head><body>
+<header class="navbar">
+  <a class="logo" href="./index.html">Kino<span>Fap</span></a>
+  <div class="actions"><span id="roomBadge" class="badge"></span></div>
+</header>
+<div class="watch">
+  <div class="player">
+    <div class="syncbar">
+      <button class="icon-btn" id="inviteBtn" style="display:none">Пригласить</button>
+      <button class="icon-btn" id="startBtn">Начать вместе</button>
+      <button class="icon-btn" id="pauseBtn">Пауза</button>
+      <button class="icon-btn" id="resyncBtn">Ресинхронизировать</button>
+      <span id="countdown" class="badge" style="display:none">3</span>
+    </div>
+    <iframe id="kpFrame" allow="autoplay"></iframe>
+    <video id="nativeVideo" controls style="display:none;background:#000"></video>
+  </div>
+  <div class="chat">
+    <div class="head">
+      <div>Чат</div>
+      <div><span class="badge" id="presence">0</span></div>
+    </div>
+    <div class="list" id="chatList"></div>
+    <div class="input">
+      <input id="nick" placeholder="Ник" style="max-width:140px"/>
+      <input id="msg" placeholder="Сообщение"/>
+      <button id="send">Отправить</button>
+    </div>
+  </div>
+</div>
+<script src="./config.js"></script>
+<script src="./watch.js"></script>
+</body></html>
