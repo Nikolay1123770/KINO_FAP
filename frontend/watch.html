@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Совместный просмотр</title>
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet"/>
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="watch.js" defer></script>
+</head>
+<body>
+  <h1>Совместный просмотр</h1>
+  <video id="videoPlayer" class="video-js vjs-big-play-centered" controls autoplay width="800" height="450"></video>
+  <div id="chat">
+    <ul id="messages"></ul>
+    <input id="msgInput" placeholder="Введите сообщение...">
+    <button onclick="sendMessage()">Отправить</button>
+  </div>
+</body>
+</html>
