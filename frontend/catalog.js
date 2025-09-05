@@ -7,7 +7,7 @@ const PLAYLISTS = [
 ];
 
 // ⚠️ Замени URL на адрес своего Render-прокси
-const PROXY = "https://kino-fap1.onrender.com";
+const PROXY = "https://kino-fap1.onrender.com/proxy?url=";
 
 // Загружаем плейлист через прокси
 async function loadPlaylist(url) {
